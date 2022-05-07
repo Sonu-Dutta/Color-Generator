@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body{
+    background-color: #d9dee8;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+input, textarea,button{
+    font-family: inherit;
+}
+
+.container{
+    background-color: #f8f6f6;
+    border-radius: 6px;
+    box-shadow: 0 0 25px 5px rgba(82,86,94,0.2);
+    display: flex;
+    margin: 1rem;
+}
+
+.color-preview{
+    width: 280px;
+    /* height: 250px; */
+    background-color: #ed145b;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.controls{
+    /* width: 430px; */
+    /* height: 250px; */
+    padding: 60px;
+    background-color: #f8f6f6;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.input-box input{
+    width: 17.6rem;
+    padding: 15px;
+    color: #ed145b;
+    background: transparent;
+    font-size: 22px;
+    font-weight: 600;
+    border: 2px solid #ed145b;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.input-box .copy-btn{
+    padding: 17.6px 25px;
+    color: #f8f6f6;
+    background-color: #ed145b;
+    font-size: 22px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+    position:relative;
+    right: .7rem;
+}
+
+.generate-btn{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    color: #f8f6f6;
+    background-color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.copy-btn:active, .generate-btn:active{
+    opacity: 0.9;
+}
+
+.alert-msg{
+    width: 400px;
+    padding: 15px;
+    color: #f8f6f6;
+    background-color: #363636;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    text-align: center;
+    opacity: 0;
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.alert-msg .code{
+    font-weight: 700;
+}
+
+.slide-effect{
+    animation: slide 2s ease-in;
+}
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+        bottom: -100px;
+    }
+    20%{
+        opacity: 1;
+        bottom: 20px;
+    }
+    90%{
+        opacity: 1;
+        bottom: 20px;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media(max-width:738px){
+
+    .container{
+        flex-direction: column;
+    }
+    .input-box input{
+        position: relative;
+        right: 2rem;
+        width: 14rem;
+    }
+    
+    .input-box .copy-btn{
+        position: relative;
+        bottom: 3.7rem;
+        left: 8rem;
+    }
+    .color-preview{
+        height: 16rem;
+        width: 20rem;
+    }
+
+    .controls{
+        width: 20rem;
+    }
+}
+
+
+
